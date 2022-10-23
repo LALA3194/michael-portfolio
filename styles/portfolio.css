@@ -1,0 +1,73 @@
+/*I added a new folder that will contain all my css... you can name the css file whatever you want */
+/*:root= this is a way that you can home certain propeties that you know you want to use multiple times... 
+if you want to change it in the future you just change it from the root and it changes it in the whole project.
+You never want to name them with a syntax that already exists like just color...*/
+:root {
+  --primary-color: #668ba4;
+  --secondary-color: #729c81;
+  --detail-color: #dde0ab;
+  --secondary-shadow: 5px 5px 10px rgba(151, 203, 169, 0.4);
+}
+/* you would then call the root by using var() for example.. */
+h1 {
+  color: var(--secondary-color);
+  font-size: 50px;
+}
+/*This is the CSS i used for my navbar... I haven't made it responsive yet just FYI lol*/
+.logo {
+  max-width: 60px;
+}
+.navbar {
+  height: 60px;
+}
+/*This one is literaly just controling the color of the links on the nav-bar*/
+.nav-link {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: 0px 10px;
+}
+/*This one is a pseudo-class is a keyword added to a selector that specifies a special state of the selected element.. in 
+this case when the link is being hoverd*/
+.nav-link:hover {
+  color: var(--secondary-color);
+}
+/*This is the CSS I used for the Heading*/
+.hero {
+  background-color: #8baeb47a;
+  text-align: left;
+  padding: 100px 100px;
+}
+.hero h1 {
+  font-family: "Lobster", cursive;
+  font-size: 96px;
+}
+.hero h2 {
+  text-align: left;
+  color: var(--primary-color);
+}
+/*This is the CSS for the cool code I took from the girl that makes the html alternate*/
+.font::before {
+  content: " ";
+  animation: animate infinite 7s;
+}
+
+@keyframes animate {
+  0% {
+    content: "an artist 🎨";
+  }
+  20% {
+    content: "a world traveler 🌏";
+  }
+  40% {
+    content: "a sustainability advocate 🌱";
+  }
+  60% {
+    content: "a jiu-jitsu practicioner 🥋";
+  }
+  80% {
+    content: "an educator 🍎";
+  }
+  100% {
+    content: "a go getter 🏆";
+  }
+}
